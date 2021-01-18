@@ -1,0 +1,163 @@
+(deftemplate proof
+	(slot userName)
+	(slot diseaseName)
+        (slot testName)
+	(slot validated)
+)
+
+(deftemplate user7Question4Value
+	(slot name)
+	(slot answer1 (allowed-integers 0 1 2 3))
+	(slot answer2 (allowed-integers 0 1 2 3))
+	(slot answer3 (allowed-integers 0 1 2 3))
+	(slot answer4 (allowed-integers 0 1 2 3))
+        (slot answer5 (allowed-integers 0 1 2 3))
+	(slot answer6 (allowed-integers 0 1 2 3))
+        (slot answer7 (allowed-integers 0 1 2 3))
+)
+
+(deftemplate user26Question4Value
+	(slot name)
+	(slot answer1 (allowed-integers 0 1 2 3))
+	(slot answer2 (allowed-integers 0 1 2 3))
+	(slot answer3 (allowed-integers 0 1 2 3))
+	(slot answer4 (allowed-integers 0 1 2 3))
+        (slot answer5 (allowed-integers 0 1 2 3))
+	(slot answer6 (allowed-integers 0 1 2 3))
+        (slot answer7 (allowed-integers 0 1 2 3))
+	(slot answer8 (allowed-integers 0 1 2 3))
+	(slot answer9 (allowed-integers 0 1 2 3))
+	(slot answer10 (allowed-integers 0 1 2 3))
+	(slot answer11 (allowed-integers 0 1 2 3))
+        (slot answer12 (allowed-integers 0 1 2 3))
+	(slot answer13 (allowed-integers 0 1 2 3))
+        (slot answer14 (allowed-integers 0 1 2 3))
+	(slot answer15 (allowed-integers 0 1 2 3))
+	(slot answer16 (allowed-integers 0 1 2 3))
+	(slot answer17 (allowed-integers 0 1 2 3))
+	(slot answer18 (allowed-integers 0 1 2 3))
+        (slot answer19 (allowed-integers 0 1 2 3))
+	(slot answer20 (allowed-integers 0 1 2 3))
+        (slot answer21 (allowed-integers 0 1 2 3))
+	(slot answer22 (allowed-integers 0 1 2 3))
+	(slot answer23 (allowed-integers 0 1 2 3))
+        (slot answer24 (allowed-integers 0 1 2 3))
+	(slot answer25 (allowed-integers 0 1 2 3))
+        (slot answer26 (allowed-integers 0 1 2 3))
+)
+
+(deftemplate disease
+	(slot nameDisease)
+	(slot testName)
+)
+
+(deftemplate diseaseUser
+	(slot nameUser)
+	(slot nameDisease)
+        (slot total)
+        (slot count)
+        (slot calculated)
+	(slot valPrint)
+)
+
+(deftemplate testValues7Question4Value
+	(slot nameDisease)
+	(slot testName)
+	(slot answer1 (allowed-integers 0 1 2 3))
+        (slot answer2 (allowed-integers 0 1 2 3))
+        (slot answer3 (allowed-integers 0 1 2 3))
+        (slot answer4 (allowed-integers 0 1 2 3))
+        (slot answer5 (allowed-integers 0 1 2 3))
+        (slot answer6 (allowed-integers 0 1 2 3))
+        (slot answer7 (allowed-integers 0 1 2 3))
+)
+
+(deftemplate testValues
+	(slot nameDisease)
+	(slot testName)
+	(slot answer1 (allowed-integers 0 1 2 3))
+        (slot answer2 (allowed-integers 0 1 2 3))
+        (slot answer3 (allowed-integers 0 1 2 3))
+        (slot answer4 (allowed-integers 0 1 2 3))
+        (slot answer5 (allowed-integers 0 1 2 3))
+        (slot answer6 (allowed-integers 0 1 2 3))
+        (slot answer7 (allowed-integers 0 1 2 3))
+	(slot answer8 (allowed-integers 0 1 2 3))
+	(slot answer9 (allowed-integers 0 1 2 3))
+	(slot answer10 (allowed-integers 0 1 2 3))
+	(slot answer11 (allowed-integers 0 1 2 3))
+        (slot answer12 (allowed-integers 0 1 2 3))
+	(slot answer13 (allowed-integers 0 1 2 3))
+        (slot answer14 (allowed-integers 0 1 2 3))
+	(slot answer15 (allowed-integers 0 1 2 3))
+	(slot answer16 (allowed-integers 0 1 2 3))
+	(slot answer17 (allowed-integers 0 1 2 3))
+	(slot answer18 (allowed-integers 0 1 2 3))
+        (slot answer19 (allowed-integers 0 1 2 3))
+	(slot answer20 (allowed-integers 0 1 2 3))
+        (slot answer21 (allowed-integers 0 1 2 3))
+	(slot answer22 (allowed-integers 0 1 2 3))
+	(slot answer23 (allowed-integers 0 1 2 3))
+        (slot answer24 (allowed-integers 0 1 2 3))
+	(slot answer25 (allowed-integers 0 1 2 3))
+        (slot answer26 (allowed-integers 0 1 2 3))
+)
+
+
+(deffacts Initial
+        (user )
+
+	(disease (nameDisease "Anxiety Disorder")(testName "GAD-7, Generalised Anxiety Disorder Assessment"))
+	(disease (nameDisease "Depressive Disorder")(testName "HADS, Hospital Anxiety and Depression Scale"))
+	(disease (nameDisease "Eating Disorder")(testName "Eating Attitudes Test - 26 Item"))
+
+        (testValues7Question4Value (nameDisease "Anxiety Disorder") (testName "GAD-7, Generalised Anxiety Disorder Assessment") (answer1 3) (answer2 3) (answer3 3) (answer4 3) (answer5 3) (answer6 3) (answer7 3))
+	(testValues7Question4Value (nameDisease "Depressive Disorder") (testName "HADS, Hospital Anxiety and Depression Scale") (answer1 3) (answer2 3) (answer3 3) (answer4 3) (answer5 3) (answer6 3) (answer7 3))
+	(user26Question4Value (nameDisease "Eating Disorder") (testName "Eating Attitudes Test - 26 Item") (answer1 3) (answer2 3) (answer3 3) (answer4 3) (answer5 3) (answer6 3) (answer7 3) (answer8 3) (answer9 3) (answer10 3) (answer11 3) (answer12 3) (answer13 3) (answer14 3) (answer15 3) (answer16 3) (answer17 3) (answer18 3) (answer19 3) (answer20 3) (answer21 3) (answer22 3) (answer23 3) (answer24 3) (answer25 3) (answer26 3))
+
+
+)
+
+
+(defrule setProofs
+	(declare (salience 500))
+	?u <- (user (name ?n) (answer1 ?a1) (answer2 ?a2) (answer3 ?a3) (answer4 ?a4) (answer5 ?a5) (answer6 ?a6) (answer7 ?a7))
+	(test(neq ?n nil))
+
+	=>
+
+	(assert (diseaseUser (nameUser ?n) (nameDisease "Anxiety Disorder") (total 21) (count 0) (calculated FALSE) (valPrint FALSE)))
+        (assert (proof (userName ?n) (diseaseName "Anxiety Disorder") (testName "GAD-7, Generalised Anxiety Disorder Assessment") (validated FALSE)))
+)
+		
+(defrule testQuestion
+	(declare (salience 400))
+	?p <- (proof (userName ?n) (diseaseName ?name1) (testName ?tN) (validated FALSE))
+	?u <- (user (name ?n) (answer1 ?a1) (answer2 ?a2) (answer3 ?a3) (answer4 ?a4) (answer5 ?a5) (answer6 ?a6) (answer7 ?a7)) 
+	?r <- (diseaseUser (nameUser ?n) (nameDisease ?name1) (total ?t) (count ?c) (calculated ?cal) (valPrint FALSE))
+
+	=>
+        (modify ?r (count (+ ?c ?a1 ?a2 ?a3 ?a4 ?a5 ?a6 ?a7)))
+      	(modify ?p (validated TRUE))
+)	
+
+
+(defrule assert-unprinted "Asserts each item that needs to be printed."
+  	(declare (salience 300))
+  	(diseaseUser (nameUser ?name2) (nameDisease ?name1) (total ?t) (count ?c)(calculated ?cal) (valPrint FALSE))
+  	=>
+  	(assert (unprinted ?name1))
+        (printout t "The user " ?name2 " has obtained " ?c " points" crlf)
+	(if (<= ?c 4)
+      	     	then 
+        	(printout t "The patient is considered as normal." crlf))
+	(if (and (>= ?c 5) (<= ?c 10))
+      	     	then 
+             	(printout t "The patient has mild anxiety. Please, take care of yourself and rest." crlf))
+	(if (and (>= ?c 11) (<= ?c 15))
+      	     	then 
+             	(printout t "The patient has moderate anxiety. Please refer to a specialist." crlf))
+	(if (>= ?c 16)
+      	     	then 
+        	(printout t "The patient has severe anxiety. Please refer to a specialist as soon as possible." crlf))
+)

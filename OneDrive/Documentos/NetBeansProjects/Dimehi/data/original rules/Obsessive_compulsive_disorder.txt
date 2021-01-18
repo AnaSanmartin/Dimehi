@@ -1,0 +1,282 @@
+(deftemplate proof
+	(slot userName)
+	(slot diseaseName)
+        (slot testName)
+	(slot validated)
+)
+
+(deftemplate user
+	(slot name)
+	(slot answer1 (allowed-integers 0 1 2 3 4))
+	(slot answer2 (allowed-integers 0 1 2 3 4))
+	(slot answer3 (allowed-integers 0 1 2 3 4))
+	(slot answer4 (allowed-integers 0 1 2 3 4))
+        (slot answer5 (allowed-integers 0 1 2 3 4))
+	(slot answer6 (allowed-integers 0 1 2 3 4))
+        (slot answer7 (allowed-integers 0 1 2 3 4))
+	(slot answer8 (allowed-integers 0 1 2 3 4))
+	(slot answer9 (allowed-integers 0 1 2 3 4))
+	(slot answer10 (allowed-integers 0 1 2 3 4))
+	(slot answer11 (allowed-integers 0 1 2 3 4))
+        (slot answer12 (allowed-integers 0 1 2 3 4))
+	(slot answer13 (allowed-integers 0 1 2 3 4))
+        (slot answer14 (allowed-integers 0 1 2 3 4))
+	(slot answer15 (allowed-integers 0 1 2 3 4))
+	(slot answer16 (allowed-integers 0 1 2 3 4))
+	(slot answer17 (allowed-integers 0 1 2 3 4))
+	(slot answer18 (allowed-integers 0 1 2 3 4))
+)
+
+(deftemplate disease
+	(slot nameDisease)
+	(slot testName)
+)
+
+(deftemplate diseaseUser
+	(slot nameUser)
+	(slot nameDisease)
+        (slot total)
+        (slot count)
+        (slot calculated)
+	(slot valPrint)
+)
+
+(deftemplate testValues
+	(slot nameDisease)
+	(slot testName)
+	(slot answer1 (allowed-integers 0 1 2 3 4))
+	(slot answer2 (allowed-integers 0 1 2 3 4))
+	(slot answer3 (allowed-integers 0 1 2 3 4))
+	(slot answer4 (allowed-integers 0 1 2 3 4))
+        (slot answer5 (allowed-integers 0 1 2 3 4))
+	(slot answer6 (allowed-integers 0 1 2 3 4))
+        (slot answer7 (allowed-integers 0 1 2 3 4))
+	(slot answer8 (allowed-integers 0 1 2 3 4))
+	(slot answer9 (allowed-integers 0 1 2 3 4))
+	(slot answer10 (allowed-integers 0 1 2 3 4))
+	(slot answer11 (allowed-integers 0 1 2 3 4))
+        (slot answer12 (allowed-integers 0 1 2 3 4))
+	(slot answer13 (allowed-integers 0 1 2 3 4))
+        (slot answer14 (allowed-integers 0 1 2 3 4))
+	(slot answer15 (allowed-integers 0 1 2 3 4))
+	(slot answer16 (allowed-integers 0 1 2 3 4))
+	(slot answer17 (allowed-integers 0 1 2 3 4))
+	(slot answer18 (allowed-integers 0 1 2 3 4))
+)
+
+(deffacts Initial
+        (user )
+
+	(disease (nameDisease "Obsessive Compulsive Disorder")(testName "OCI-R: Obsessive Compulsive Inventory - Revised"))
+
+        (testValues (nameDisease "Obsessive Compulsive Disorder") (testName "OCI-R: Obsessive Compulsive Inventory - Revised") (answer1 3) (answer2 3) (answer3 3) (answer4 3) (answer5 3) (answer6 3) (answer7 3) (answer8 3) (answer9 3) (answer10 3) (answer11 3) (answer12 3) (answer13 3) (answer14 3) (answer15 3) (answer16 3) (answer17 3) (answer18 3))
+)
+
+(defrule GetName
+	(declare (salience 500))
+	?u <- (user (name nil)) 
+	=>
+	(printout t "What is your name: ")	
+	(modify ?u (name (read))) 
+)
+
+(defrule Answer1
+	(declare (salience 500))
+	?u <- (user (answer1 nil)) 
+	=>
+	(printout t " I have saved up so many things that they get in the way: ")	
+	(modify ?u (answer1 (read))) 
+)
+
+
+(defrule Answer2
+	(declare (salience 500))
+	?u <- (user (answer2 nil)) 
+	=>
+	(printout t "I check things more often than necessary: ")	
+	(modify ?u (answer2 (read))) 
+)
+
+
+(defrule Answer3
+	(declare (salience 500))
+	?u <- (user (answer3 nil)) 
+	=>
+	(printout t " I get upset if objects are not arranged properly: ")	
+	(modify ?u (answer3 (read))) 
+)
+
+
+(defrule Answer4
+	(declare (salience 500))
+	?u <- (user (answer4 nil)) 
+	=>
+	(printout t " I feel compelled to count while I am doing things: ")	
+	(modify ?u (answer4 (read))) 
+)
+
+
+(defrule Answer5
+	(declare (salience 500))
+	?u <- (user (answer5 nil)) 
+	=>
+	(printout t " I find it difficult to touch an object when I know it has been touched by strangers or certain people: ")	
+	(modify ?u (answer5 (read))) 
+)
+
+
+(defrule Answer6
+	(declare (salience 500))
+	?u <- (user (answer6 nil)) 
+	=>
+	(printout t " I find it difficult to control my own thoughts: ")	
+	(modify ?u (answer6 (read))) 
+)
+
+
+(defrule Answer7
+	(declare (salience 500))
+	?u <- (user (answer7 nil)) 
+	=>
+	(printout t " I collect things I do not need: ")	
+	(modify ?u (answer7 (read))) 
+)
+
+(defrule Answer8
+	(declare (salience 500))
+	?u <- (user (answer8 nil)) 
+	=>
+	(printout t "I repeatedly check doors, windows, drawers, etc: ")	
+	(modify ?u (answer8 (read))) 
+)
+
+
+(defrule Answer9
+	(declare (salience 500))
+	?u <- (user (answer9 nil)) 
+	=>
+	(printout t " I get upset if others change the way I have arranged things: ")	
+	(modify ?u (answer9 (read))) 
+)
+
+
+(defrule Answer10
+	(declare (salience 500))
+	?u <- (user (answer10 nil)) 
+	=>
+	(printout t " I feel I have to repeat certain numbers: ")	
+	(modify ?u (answer10 (read))) 
+)
+
+
+(defrule Answer11
+	(declare (salience 500))
+	?u <- (user (answer11 nil)) 
+	=>
+	(printout t " I sometimes have to wash or clean myself simply because I feel contaminated: ")	
+	(modify ?u (answer11 (read))) 
+)
+
+
+(defrule Answer12
+	(declare (salience 500))
+	?u <- (user (answer12 nil)) 
+	=>
+	(printout t " I am upset by unpleasant thoughts that come into my mind against my will: ")	
+	(modify ?u (answer12 (read))) 
+)
+
+
+(defrule Answer13
+	(declare (salience 500))
+	?u <- (user (answer13 nil)) 
+	=>
+	(printout t " I avoid throwing things away because I am afraid I might need them later: ")	
+	(modify ?u (answer13 (read))) 
+)
+
+
+(defrule Answer14
+	(declare (salience 500))
+	?u <- (user (answer14 nil)) 
+	=>
+	(printout t " I repeatedly check gas and water taps and light switches after turning them off: ")	
+	(modify ?u (answer14 (read))) 
+)
+
+(defrule Answer15
+	(declare (salience 500))
+	?u <- (user (answer15 nil)) 
+	=>
+	(printout t " I need things to be arranged in a particular way: ")	
+	(modify ?u (answer15 (read))) 
+)
+
+
+(defrule Answer16
+	(declare (salience 500))
+	?u <- (user (answer16 nil)) 
+	=>
+	(printout t " I feel that there are good and bad numbers: ")	
+	(modify ?u (answer16 (read))) 
+)
+
+
+(defrule Answer17
+	(declare (salience 500))
+	?u <- (user (answer17 nil)) 
+	=>
+	(printout t " I wash my hands more often and longer than necessary: ")	
+	(modify ?u (answer17 (read))) 
+)
+
+
+(defrule Answer18
+	(declare (salience 500))
+	?u <- (user (answer18 nil)) 
+	=>
+	(printout t "I frequently get nasty thoughts and have difficulty in getting rid of them: ")	
+	(modify ?u (answer18 (read))) 
+)
+
+
+
+(defrule setProofs
+	(declare (salience 500))
+	?u <- (user (name ?n) (answer1 ?a1) (answer2 ?a2) (answer3 ?a3) (answer4 ?a4) (answer5 ?a5) (answer6 ?a6) (answer7 ?a7) (answer8 ?a8) (answer9 ?a9) (answer10 ?a10) (answer11 ?a11) (answer12 ?a12) (answer13 ?a13) (answer14 ?a14) (answer15 ?a15) (answer16 ?a16) (answer17 ?a17) (answer18 ?a18))
+	(test(neq ?n nil))
+
+	=>
+
+	(assert (diseaseUser (nameUser ?n) (nameDisease "Obsessive Compulsive Disorder") (total 18) (count 0) (calculated FALSE) (valPrint FALSE)))
+        (assert (proof (userName ?n) (diseaseName "Obsessive Compulsive Disorder") (testName "OCI-R: Obsessive Compulsive Inventory - Revised") (validated FALSE)))
+)
+		
+(defrule testQuestion
+	(declare (salience 400))
+	?p <- (proof (userName ?n) (diseaseName ?name1) (testName ?tN) (validated FALSE))
+	?u <- (user (name ?n) (answer1 ?a1) (answer2 ?a2) (answer3 ?a3) (answer4 ?a4) (answer5 ?a5) (answer6 ?a6) (answer7 ?a7) (answer8 ?a8) (answer9 ?a9) (answer10 ?a10) (answer11 ?a11) (answer12 ?a12) (answer13 ?a13) (answer14 ?a14) (answer15 ?a15) (answer16 ?a16) (answer17 ?a17) (answer18 ?a18))
+	?r <- (diseaseUser (nameUser ?n) (nameDisease ?name1) (total ?t) (count ?c) (calculated ?cal) (valPrint FALSE))
+
+	=>
+        (modify ?r (count (+ ?c ?a1 ?a2 ?a3 ?a4 ?a5 ?a6 ?a7 ?a8 ?a9 ?a10 ?a11 ?a12 ?a13 ?a14 ?a15 ?a16 ?a17 ?a18)))
+      	(modify ?p (validated TRUE))
+)	
+
+
+(defrule assert-unprinted "Asserts each item that needs to be printed."
+  	(declare (salience 300))
+  	(diseaseUser (nameUser ?name2) (nameDisease ?name1) (total ?t) (count ?c) (calculated ?cal) (valPrint FALSE))
+  	=>
+  	(assert (unprinted ?name1))
+        (printout t "The user " ?name2 " has obtained " ?c " points" crlf)
+        (if (<= ?c 20)
+      	     	then 
+        	(printout t "The patient is considered as normal." crlf))
+	(if (and (>= ?c 21) (<= ?c 30))
+      	     	then 
+             	(printout t "The patient has moderate OCD. Please refer to a specialist." crlf))
+	(if (>= ?c 31)
+      	     	then 
+        	(printout t "The patient has severe OCD. Please refer to a specialist as soon as possible." crlf))
+)
